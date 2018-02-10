@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Landing Page - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet' %}" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/landing-page.min.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <section class="showcase">
+
+
+          <!-- Navigation -->
+          <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+              <a class="navbar-brand" href="/expense/">Expenso</a>
+            </div>
+          </nav>
+
+
+          <div class="container-fluid p-0">
+            <div class="row no-gutters">
+              <div class="col-lg-7 order-lg-2 showcase-text">
+                  <form class="col-lg-9" action="/expense/login" method="post">
+                  {% csrf_token %}
+                    <h2> Sign-In </h2>
+                    <br>
+                    <br>
+                    <div class="form-group">
+                      <label class="" style="font-family: 'Nunito', sans-serif;" for="usernameid">Username</label>
+                      <input type="text" class="form-control" name="usernameid" aria-describedby="emailHelp" placeholder="Enter your username">
+                      
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="" style="font-family: 'Nunito', sans-serif;" for="passwordid">Password</label>
+                      <input type="password" class="form-control" name="passwordid" placeholder="Password">
+                    </div>
+                    {%if err%}
+                        <p style="color:red">Invalid User Name/Password</p>
+                    {%else%}
+                        <br>
+                    {%endif%}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/expense/newuser"  class="btn btn-link" style="margin-left: 1rem;">New User?</a>
+                  </form>
+              </div>
+              <div class="col-lg-5 order-lg-1 my-auto showcase-text">
+                <h2>Fully Responsive Design</h2>
+                <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+              </div>
+            </div>
+          </div>
+    </section>
+     
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{%static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+  </body>
+
+</html>
