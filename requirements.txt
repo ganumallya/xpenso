@@ -29,7 +29,7 @@ mistune==0.7.4
 nameparser==0.5.2
 nbconvert==5.2.1
 nbformat==4.3.0
-nltk==3.2.2
+nltk==3.6.3
 notebook==5.0.0
 numpy==1.12.1
 pandas==0.20.3
