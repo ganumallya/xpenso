@@ -31,7 +31,7 @@ nbconvert==5.2.1
 nbformat==4.3.0
 nltk==3.2.2
 notebook==5.0.0
-numpy==1.12.1
+numpy==1.21.0
 pandas==0.20.3
 pandocfilters==1.4.1
 pew==1.1.2
