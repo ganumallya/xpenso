@@ -27,7 +27,7 @@ matplotlib==2.1.0
 mccabe==0.6.1
 mistune==0.7.4
 nameparser==0.5.2
-nbconvert==5.2.1
+nbconvert==6.3.0
 nbformat==4.3.0
 nltk==3.2.2
 notebook==5.0.0
